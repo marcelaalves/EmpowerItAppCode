@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLinear"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/bluebar"
+        android:id="@+id/ll" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/naming" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="47.39"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/iid">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/corp"
+                android:id="@+id/image">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="46.35"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+
+                <TextView
+                    android:id="@+id/widget37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Coorpotation"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#152D53"
+                    android:layout_x="153dp"
+                    android:layout_y="49dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/widget38"
+                    android:layout_width="122dp"
+                    android:layout_height="26dp"
+                    android:textSize="16sp"
+                    android:text="Sao Paulo, Brazil"
+                    android:textStyle="bold"
+                    android:textColor="#ff666666"
+                    android:layout_x="178dp"
+                    android:layout_y="80dp"
+                    android:layout_alignBottom="@+id/widget39"
+                    android:layout_alignRight="@+id/widget37"
+                    android:layout_alignEnd="@+id/widget37" />
+                <ImageView
+                    android:id="@+id/widget39"
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/loc"
+                    android:layout_x="153dp"
+                    android:layout_y="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_search"
+
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMeusCursos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_business"
+
+                android:padding="5dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:gravity="center"
+        android:baselineAligned="false" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMeusCurs22os"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_agenda"
+
+                android:padding="5dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMeusCllursos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_settings"
+
+                android:padding="5dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Marcela/AndroidStudioProjects/EmpowerIt/app/src/main/res/layout/activity_coop_main.xml -->
