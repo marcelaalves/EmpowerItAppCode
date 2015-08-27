@@ -21,4 +21,6 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.smartcanvas:smartcanvas-java-sdk:0.1.8'
+    compile 'com.google.api-client:google-api-client:1.20.0'
 }

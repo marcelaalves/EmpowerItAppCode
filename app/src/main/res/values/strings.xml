@@ -4,5 +4,7 @@
     <string name="app_name">EmpowerIt</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="success_card_insert">Card inserted</string>
+    <string name="erro_card_insert">Card insert erro</string>
 
 </resources>

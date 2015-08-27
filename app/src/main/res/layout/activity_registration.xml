@@ -99,6 +99,7 @@
         android:layout_height="64dp"
         android:background="@drawable/register"
         android:gravity="bottom"
+        android:orientation="horizontal"
         android:id="@+id/btn_register">
     </LinearLayout>
 
