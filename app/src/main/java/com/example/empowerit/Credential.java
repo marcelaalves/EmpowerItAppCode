@@ -5,34 +5,11 @@ package com.example.empowerit;
  */
 public class Credential {
 
-    private String cliente_id;
+    public static String cliente_id ="kMRaR35PmKwZRqtEfznNkQUaiitKr0Ij" ;
 
-    private String access_token;
-
-
+    public static String access_token = "rX8DZ5CfrFrMFhtmwaUWxMptC3UiqWvd";
 
 
-    public Credential(String id, String token) {
 
-        this.cliente_id = id;
-
-        this.access_token = token;
-    }
-
-    public String getToken() {
-        return access_token;
-    }
-
-    public void setToken(String token) {
-        this.access_token = token;
-    }
-
-    public String getId() {
-        return cliente_id;
-    }
-
-    public void setId(String id) {
-        this.cliente_id = id;
-    }
 
 }

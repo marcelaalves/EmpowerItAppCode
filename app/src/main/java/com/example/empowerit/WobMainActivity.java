@@ -16,7 +16,7 @@ public class WobMainActivity extends Activity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RestUtil.get(getApplication().getApplicationContext());
+
             }
         });
 

@@ -86,7 +86,8 @@
         android:layout_height="64dp"
         android:background="@drawable/register"
         android:gravity="bottom"
-        android:id="@+id/btn_register">
+        android:id="@+id/btn_register"
+        android:orientation="horizontal">
     </LinearLayout>
 
 </LinearLayout>

@@ -5,17 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.testing.json.MockJsonFactory;
-import com.google.api.client.util.DateTime;
 import com.smartcanvas.Smartcanvas;
 import com.smartcanvas.model.Card;
-
-import org.jose4j.lang.JoseException;
-
-import java.io.IOException;
-import java.util.Date;
 
 /**
  * Created by Marcela on 26/08/15.
@@ -30,13 +23,16 @@ public class RegistrationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        try {
+        
+
+       /* try {
 
 
-            Smartcanvas smartcanvas = new Smartcanvas(new NetHttpTransport(), new MockJsonFactory(), Credential.cliente_id, Credential.access_token);
+          /*  Smartcanvas smartcanvas = new Smartcanvas(new NetHttpTransport(), new , Credential.cliente_id, Credential.access_token);
             Card card = new Card(givenProvider());
             String s = card.getSummary();
             Card.Author author = new Card.Author();
+
             author.setDisplayName("Marcela Alves");
             author.setImageURL("http://www.pubzi.com/f/731147-sm-731131-Cartoon-Flower.png");
            card.setAuthor(author);
@@ -46,7 +42,9 @@ public class RegistrationActivity extends Activity {
             card.setId(Long.valueOf(1234));
             card.setContent("App Company");
             card.setTitle("EmpowerIT");
-            smartcanvas.cards().insert(card);
+            new InsertCardTask(smartcanvas,card,new InsertCardBack()).execute();
+
+
             Card newCard = smartcanvas.cards().get(Long.valueOf(1234));
 
 
@@ -58,7 +56,7 @@ public class RegistrationActivity extends Activity {
         catch (Exception e)
         {
             e.printStackTrace();
-        }
+        }*/
         newRegister = (LinearLayout) findViewById(R.id.btn_register);
         newRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +70,32 @@ public class RegistrationActivity extends Activity {
 
     }
 
+
     private Card.ContentProvider givenProvider() {
         return new Card.ContentProvider("ID provider", "GooglePlus", "Content ID");
+    }
+
+
+    public class InsertCardBack implements  CallBack{
+
+        @Override
+        public void atualizarProgressoTarefa() {
+
+        }
+
+        @Override
+        public void erroTarefa(Exception e) {
+            Toast.makeText(getApplication().getApplicationContext(), "Error",Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void tarefaFinalizada(boolean b) {
+            if(b) {
+                Toast.makeText(getApplication().getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(getApplication().getApplicationContext(), "Exception", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
 
