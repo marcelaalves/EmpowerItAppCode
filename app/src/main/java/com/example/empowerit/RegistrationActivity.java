@@ -49,6 +49,8 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        finds();
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
@@ -58,7 +60,7 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
             e.printStackTrace();
         }
 
-        finds();
+        newRegister.setOnClickListener(this);
 
     }
 
@@ -74,15 +76,13 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
     public void onClick(View v) {
         if (v.getId() == R.id.btn_register) {
 
-            extractFields();
+            extractFieldsAndIntent();
 
-            Intent i = new Intent(RegistrationActivity.this, Login.class);
-            startActivity(i);
-            finish();
+
         }
     }
 
-    private void extractFields() {
+    private void extractFieldsAndIntent() {
         Date date = new Date();
         DateTime dateTime = new DateTime(date);
 
@@ -93,6 +93,7 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         Card buildCard = Card.newBuilder()
                 .withTitle(company_name.getText().toString())
                 .withAuthor(new Card.Author())
+                .withContentProvider(new Card.ContentProvider("123", "123", "123"))
                 .withContent(user_name.getText().toString())
                 .build();
         buildCard.setCreateDate(dateTime);
@@ -100,6 +101,9 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         try {
             smartcanvas.cards().insert(buildCard);
             Toast.makeText(this, R.string.success_card_insert, Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(RegistrationActivity.this, Login.class);
+            startActivity(i);
+            finish();
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(this, R.string.erro_card_insert, Toast.LENGTH_SHORT).show();
