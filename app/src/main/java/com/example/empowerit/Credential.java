@@ -5,9 +5,7 @@ package com.example.empowerit;
  */
 public class Credential {
 
-
     public static String cliente_id ="kMRaR35PmKwZRqtEfznNkQUaiitKr0Ij" ;
 
     public static String access_token = "rX8DZ5CfrFrMFhtmwaUWxMptC3UiqWvd";
-
 }
