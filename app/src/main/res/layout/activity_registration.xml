@@ -2,17 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F3F7"
-    >
+    android:background="#F2F3F7">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView1"
@@ -26,37 +25,38 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_register"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:checked="false"
-        android:text="Register as a WOB"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true" />
+        android:text="Register as a WOB" />
 
     <LinearLayout
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@drawable/register"
-        android:gravity="bottom"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"></LinearLayout>
+        android:layout_alignParentStart="true"
+        android:background="@drawable/register"
+        android:gravity="bottom"
+        android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:orientation="vertical"
-        android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout2">
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/company_name"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center"
             android:hint="company name"
@@ -67,7 +67,7 @@
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center"
             android:hint="email"
@@ -78,7 +78,7 @@
         <EditText
             android:id="@+id/editText6"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="password"
             android:password="true"
@@ -88,7 +88,7 @@
         <EditText
             android:id="@+id/password2"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="confirm password"
             android:password="true"
