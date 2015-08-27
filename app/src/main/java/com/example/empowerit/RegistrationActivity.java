@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.smartcanvas.Smartcanvas;
 import com.smartcanvas.model.Card;
@@ -76,27 +75,7 @@ public class RegistrationActivity extends Activity {
     }
 
 
-    public class InsertCardBack implements  CallBack{
 
-        @Override
-        public void atualizarProgressoTarefa() {
-
-        }
-
-        @Override
-        public void erroTarefa(Exception e) {
-            Toast.makeText(getApplication().getApplicationContext(), "Error",Toast.LENGTH_LONG).show();
-        }
-
-        @Override
-        public void tarefaFinalizada(boolean b) {
-            if(b) {
-                Toast.makeText(getApplication().getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(getApplication().getApplicationContext(), "Exception", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
 
 
 }
